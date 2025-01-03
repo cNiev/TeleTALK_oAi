@@ -1,1 +1,20 @@
+name: OpenAI Interaction
 
+on: [push]
+
+jobs:
+  openai-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run OpenAI Interaction
+        # `set -e` detiene la ejecución si ocurre algún error en el script
+        run: |
+          set -e
+          node index.js
+        env:
+          OPENAI_PROJECT_KEY: ${{ secrets.OPENAI_PROJECT_KEY }}
