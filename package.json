@@ -1,0 +1,12 @@
+{
+  "name": "hello-openai",
+  "version": "1.0.0",
+  "description": "Hello OpenAI GitHub Action con manejo de errores",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "openai": "^3.2.1"
+  }
+}
