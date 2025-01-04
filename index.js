@@ -14,9 +14,9 @@ const { Configuration, OpenAIApi } = require("openai");
     });
     const openai = new OpenAIApi(configuration);
 
-    // Consulta al modelo GPT-4
+    // Consulta al modelo GPT-3.5 Turbo
     const response = await openai.createChatCompletion({
-      model: "gpt-4", // Cambia "gpt-4" a "gpt-3.5-turbo" si no tienes acceso a GPT-4
+      model: "gpt-3.5-turbo", // Cambiado de "gpt-4" a "gpt-3.5-turbo"
       messages: [
         {
           role: "user",
